@@ -6,10 +6,12 @@ gem 'rails', '4.0.1'
 # Use postgresql as the database for Active Record
 gem 'pg'
 
-# Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.0'
+gem 'bootstrap-sass', '3.3.5.1'
 
-gem 'bootstrap-sass', '~> 3.3.0'
+gem 'sprockets', '2.11.0'
+
+# Use SCSS for stylesheets
+gem 'sass-rails'
 
 gem 'simple_form'
 
