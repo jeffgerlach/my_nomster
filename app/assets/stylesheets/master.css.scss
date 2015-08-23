@@ -32,3 +32,50 @@ body {
   font-family: 'kaushan_scriptregular', sans-serif;
   font-size: 26px;
 }
+
+.page_links {
+  background: url('/assets/billie_holiday.png');
+  cursor: default;
+  /* self-clearing method: */ }
+  .page_links a, .page_links span, .page_links em {
+    padding: 0.2em 0.5em;
+    display: block;
+    float: left;
+    margin-right: 1px; }
+  .page_links .disabled {
+    color: #999999;
+    border: 1px solid #999999; }
+  .page_links .current {
+    font-style: normal;
+    font-weight: bold;
+    background: black;
+    color: white;
+    border: 1px solid black; }
+  .page_links a {
+    text-decoration: none;
+    color: black;
+    border: 1px solid #999999; }
+    .page_links a:hover, .page_links a:focus {
+      color: #000033;
+      border-color: black; }
+  .page_links .page_info {
+    background: #2e6ab1;
+    color: white;
+    padding: 0.4em 0.6em;
+    width: 22em;
+    margin-bottom: 0.3em;
+    text-align: center; }
+    .page_links .page_info b {
+      color: black;
+      background: #6aa6ed;
+      padding: 0.1em 0.25em; }
+  .page_links:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden; }
+  * html .page_links {
+    height: 1%; }
+  *:first-child + html .page_links {
+    overflow: hidden; }
