@@ -10,6 +10,7 @@ gem 'bootstrap-sass', '3.3.5.1'
 
 gem 'sprockets', '2.11.0'
 
+gem 'data-confirm-modal', github: 'ifad/data-confirm-modal'
 # Use SCSS for stylesheets
 gem 'sass-rails'
 
