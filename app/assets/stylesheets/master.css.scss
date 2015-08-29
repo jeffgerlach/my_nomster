@@ -67,6 +67,19 @@ font-family: Cambria, "Hoefler Text", Utopia, "Liberation Serif", "Nimbus Roman 
   height: 300px;
 }
 
+.carousel-indicators li {
+  background-color: #FC8105;
+  border: 1px solid #FC8105;
+}
+
+.carousel-caption {
+  color: white;
+  font-size: 22px;
+  width: 325px;
+  background-color:rgba(0, 0, 0, 0.5);
+  transform: translateX(82%);
+}
+
 .page_links {
   background: url('/assets/billie_holiday.png');
   cursor: default;
