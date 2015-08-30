@@ -60,7 +60,7 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <%= f.submit "Add a Photo", :class => 'btn btn-primary' %>
+            <%= f.submit "Add Photo", :class => 'btn btn-primary' %>
           </div>
         <% end %>
       </div>
@@ -75,7 +75,7 @@
       Add a photo
       </button>
 			<%= link_to 'Edit', edit_place_path(@place), :class => 'btn btn-primary' %>
-			<%= link_to 'Delete', place_path(@place), :data => {:confirm => 'Do you really want to delete this place?', :commit => 'Yes, Delete!', :cancel => 'I changed my mind...' }, :method => :delete, :class => 'btn btn-danger' %>
+			<%= link_to 'Delete', place_path(@place), :data => {:confirm => 'Do you really want to delete this place?', :commit => 'Yes, Delete!', :cancel => 'Cancel' }, :method => :delete, :class => 'btn btn-danger' %>
 		<% end %>
 	</div>
 </div>
@@ -99,7 +99,7 @@
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-					<%= f.submit "Add a Comment", :class => 'btn btn-primary' %>
+					<%= f.submit "Add Comment", :class => 'btn btn-primary' %>
 				</div>
 			<% end %>
     </div>
