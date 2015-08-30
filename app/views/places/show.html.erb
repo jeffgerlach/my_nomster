@@ -31,8 +31,49 @@
 
   <br />
 
+  <div class="col-xs-10 col-xs-offset-1">
+    <% @place.photos.each do |photo| %>
+      <%= image_tag photo.picture, :class => 'img-responsive' %>
+      <div>
+       <i><%= photo.caption %></i>
+      </div>
+      <br />
+    <% end %>
+  </div>
+
+  <br />
+
+  <div class="clear"></div>
+
+  <!-- Photos Modal -->
+  <div class="modal fade" id="myModalPhotos" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title" id="myModalLabel">Add a photo</h4>
+        </div>
+        <%= simple_form_for @photo, :url => place_photos_path(@place) do |f| %>
+          <div class="modal-body">
+            <%= f.input :picture %>
+            <%= f.input :caption %>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <%= f.submit "Add a Photo", :class => 'btn btn-primary' %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+
 	<div class="pull-right">
 		<% if current_user && current_user == @place.user %>
+      <br />
+      <button class="btn btn-primary" data-toggle="modal" data-target="#myModalPhotos">
+      Add a photo
+      </button>
 			<%= link_to 'Edit', edit_place_path(@place), :class => 'btn btn-primary' %>
 			<%= link_to 'Delete', place_path(@place), :data => {:confirm => 'Do you really want to delete this place?', :commit => 'Yes, Delete!', :cancel => 'I changed my mind...' }, :method => :delete, :class => 'btn btn-danger' %>
 		<% end %>
@@ -41,7 +82,9 @@
 
 <div class="clear"></div>
 
-<!-- Modal -->
+
+
+<!-- Comments Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -62,6 +105,9 @@
     </div>
   </div>
 </div>
+
+<div class="clear"></div>
+<br />
 
 <div class="col-xs-10 col-xs-offset-1">
 <h1 class="pull-left">Comments</h1>
